@@ -7,6 +7,15 @@ eureka:
  instance:
   hostname: localhost
   
-  spring:
-   zipkin:
-    base-url: http://zipkin-server:9411/ 
+spring:
+  zipkin:
+   base-url: http://zipkin-server:9411/ 
+  datasource:
+    url: jdbc:mysql://standalone:3306/userreg
+    username: sa
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
